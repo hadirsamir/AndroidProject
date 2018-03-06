@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702561130607",
+    "project_id": "myshop-fc48d"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702561130607:android:0430c677f4879936",
+        "android_client_info": {
+          "package_name": "com.example.hadirsamir.myshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702561130607-3n0e9ivusbbhh6bpupatnjb6vfl5cebm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hadirsamir.myshop",
+            "certificate_hash": "a9a92f32ff18a07d32f12cd6f76ed3bd96dfa456"
+          }
+        },
+        {
+          "client_id": "702561130607-rpnmd1i2ejbdqr5g3dgip9u19ogpd037.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhD-p0qoJcS6NCOa46YCnrYl7aNaMBQSM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
