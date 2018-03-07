@@ -17,6 +17,16 @@ public class Data implements Serializable {
     private String CompanyID;
     private ArrayList<Reviews>ReviewsList;
 
+    public Data() {
+
+    }
+
+    public Data( String productName, int productPrice) {
+
+        ProductName = productName;
+        ProductPrice = productPrice;
+    }
+
     public String getProductId() {
         return ProductId;
     }

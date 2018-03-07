@@ -227,7 +227,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_cart) {
-            // Handle the camera action
+            Intent cartintent = new Intent(this,ProductCartActivity.class);
+            startActivity(cartintent);
         } else if (id == R.id.nav_history) {
 
         } else if (id == R.id.nav_logOut) {

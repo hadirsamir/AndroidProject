@@ -11,9 +11,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hadirsamir.myshop.JsonClasses.Data;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 /**
  * Created by hadirsamir on 25/02/18.
@@ -30,6 +33,9 @@ public class FragmentOne extends Fragment {
     private float Avg_rate=0;
     private ListView listView;
     private ReviewsAdapter reviewsAdapter;
+    ArrayList<Data> dataArrayList;
+    cartAdapter cart;
+    OrderDB db;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,6 +66,25 @@ public class FragmentOne extends Fragment {
         listView.setAdapter(reviewsAdapter);
 
 
+       orderbtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               db=new OrderDB(getActivity());
+               db.insert(new Data(data.getProductName(),data.getProductPrice()));
+               Toast.makeText(getActivity(),"ItemAdded",Toast.LENGTH_LONG).show();
+
+
+
+           }
+       });
+
+
+
+
+
+
+
         return myview;
     }
+
 }
