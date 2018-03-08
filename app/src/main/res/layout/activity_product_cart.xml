@@ -5,10 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.hadirsamir.myshop.ProductCartActivity">
+    tools:context="com.example.hadirsamir.myshop.Views.Cart">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkout"
+        android:onClick="onClick"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/CartRec"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" >
+
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

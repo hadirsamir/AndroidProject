@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hadirsamir.myshop.JsonClasses.Data;
+import com.example.hadirsamir.myshop.Models.Data;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

@@ -12,7 +12,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.hadirsamir.myshop.JsonClasses.Data;
+import com.example.hadirsamir.myshop.Models.Data;
 import com.example.hadirsamir.myshop.JsonClasses.Reviews;
 
 import org.json.JSONArray;

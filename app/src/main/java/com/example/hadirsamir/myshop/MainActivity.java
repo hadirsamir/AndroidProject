@@ -26,8 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.hadirsamir.myshop.JsonClasses.Data;
+import com.example.hadirsamir.myshop.Models.Data;
 import com.example.hadirsamir.myshop.JsonClasses.Reviews;
+import com.example.hadirsamir.myshop.Views.Cart;
+import com.example.hadirsamir.myshop.Views.History;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -118,18 +120,17 @@ public class MainActivity extends AppCompatActivity
                     Log.d("Json",response2.toString());
                     JSONObject jsonResponse = new JSONObject(response2);
                     JSONArray jsonArray3=jsonResponse.getJSONArray("data");
-                    for(int i = 0;i<jsonArray3.length();i++) {
+                    for(Integer i = 0;i<jsonArray3.length();i++) {
 
                         Data data =new Data();
                         JSONObject product = jsonArray3.getJSONObject(i);
-                        data.setProductId(product.getString("id"));
+                        data.setProductId(i.toString());
                         data.setProductImage(product.getString("imgUrl"));
                         data.setProductPrice(product.getInt("price"));
                         data.setProductGender(product.getInt("gender"));
                         data.setProductName(product.getString("name"));
                         data.setProductType(product.getInt("type"));
                         data.setCompanyID(product.getString("companyId"));
-
 
 
                         JSONArray jsonArray4= product.getJSONArray("reviews");
@@ -145,9 +146,9 @@ public class MainActivity extends AppCompatActivity
 
                         }
                         data.setReviewsList(ReviewsArrayList);
-                        if(data.getProductGender()==1)
-                        dataArrayList_men.add(data);
-                        else if(data.getProductGender()==2)
+                        if(data.getProductGender() == 1)
+                            dataArrayList_men.add(data);
+                        else if(data.getProductGender() == 2)
                             dataArrayList_women.add(data);
                         else
                             dataArrayList_kids.add(data);
@@ -163,11 +164,6 @@ public class MainActivity extends AppCompatActivity
                     MenView.setAdapter(recycleAdapter);
                     WomenView.setAdapter(WomAdapter);
                     ChildrenView.setAdapter(KidAdapter);
-
-
-
-
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -227,9 +223,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_cart) {
-            Intent cartintent = new Intent(this,ProductCartActivity.class);
+            Intent cartintent = new Intent(this,Cart.class);
             startActivity(cartintent);
         } else if (id == R.id.nav_history) {
+            Intent hisintent =new Intent(this,History.class);
+            startActivity(hisintent);
 
         } else if (id == R.id.nav_logOut) {
             editor=preferences.edit();

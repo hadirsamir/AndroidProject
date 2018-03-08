@@ -1,9 +1,12 @@
-package com.example.hadirsamir.myshop.JsonClasses;
+package com.example.hadirsamir.myshop.Models;
+
+import com.example.hadirsamir.myshop.JsonClasses.Reviews;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
+ * Product Data
  * Created by hadirsamir on 05/03/18.
  */
 
@@ -19,6 +22,12 @@ public class Data implements Serializable {
 
     public Data() {
 
+    }
+
+    public Data(String productId, String productName, int productPrice) {
+        ProductId = productId;
+        ProductName = productName;
+        ProductPrice = productPrice;
     }
 
     public Data( String productName, int productPrice) {
