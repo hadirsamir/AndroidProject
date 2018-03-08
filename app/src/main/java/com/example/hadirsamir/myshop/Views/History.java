@@ -3,7 +3,6 @@ package com.example.hadirsamir.myshop.Views;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -30,7 +29,7 @@ public class History extends AppCompatActivity {
                 Integer order_id = order.getOrders().get(i).getOrderID();
 
                 Intent intent = new Intent(History.this, Order.class);
-                Log.d("SamirTag", order_id.toString());
+
                 intent.putExtra("orderID", order_id);
                 startActivity(intent);
             }

@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity
 
                         Data data =new Data();
                         JSONObject product = jsonArray3.getJSONObject(i);
-                        data.setProductId(i.toString());
+                        data.setProductId(product.getString("id"));
                         data.setProductImage(product.getString("imgUrl"));
                         data.setProductPrice(product.getInt("price"));
                         data.setProductGender(product.getInt("gender"));
